@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: alien_signal_bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    plan: free
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: "<Your_Telegram_Bot_Token>"
+      - key: CHAT_ID
+        value: "<Your_Chat_ID>"
